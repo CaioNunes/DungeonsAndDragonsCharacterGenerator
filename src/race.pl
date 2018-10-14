@@ -1,12 +1,12 @@
-:- dynamic race/2.
+:- dynamic race/4.
 :- dynamic size/1.
+:- dynamic rarity/1.
+:- dynamic alignment/1. 
 
-race('Human', alto, comum).
-race('Dwarf', baixo, comum).
-race('Elf', alto, comum).
-race('Halfling', baixo, comum).
-race('Gnome', baixo, incomum).
-race('Half - Elf', alto, incomum).
-race('Half - Orc', alto, incomum).
-race('Tiefling', alto, incomum).
-race('Dragonborn', alto, incomum).
+race('Dwarf', baixo, comum, leal).
+race('Elf', alto, comum, caotico).
+race('Gnome', baixo, incomum, neutro).
+race('Tiefling', alto, incomum, caotico).
+race('Halfling', baixo, comum, neutro).
+race('Human', alto, comum, neutro).
+race('Dragonborn', alto, incomum, neutro).
