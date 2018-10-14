@@ -4,11 +4,13 @@
 :- consult(database/class).
 :- consult(about_race).
 :- consult(about_class).
+:- consult(about_skills).
 
 menu :- nl,
 	write("==== Welcome to D&D Character Generator ===="),
 	question_about_size,
-	show_answer.
+	show_answer,
+	show_skills.
 
 main :- menu.
 

@@ -1,5 +1,4 @@
 :- consult(database/class).
-% :- consult(menu).
 
 :- style_check(-singleton).
 

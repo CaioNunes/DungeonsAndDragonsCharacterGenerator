@@ -5,6 +5,7 @@
 :- dynamic ability/1.
 :- dynamic behavior/1.
 :- dynamic answer_class/1.
+:- dynamic skill/2.
 
 % Name, combat type(ranged, meele or indifferent), can use magic, guided by a supernatural entity
 % knowledge or strength or agility, agressive or peaceful
@@ -21,3 +22,11 @@ class('Ladino', curta, nao, nao, agilidade, indiferente).
 class('Feiticeiro', longa, sim, nao, conhecimento, indiferente).
 class('Bruxo', longa, sim, sim, conhecimento, agressivo).
 class('Mago', longa, sim, nao, conhecimento, pacifico).
+
+skill('Bárbaro', 'Adestrar Animais').
+skill('Bárbaro', 'Atletismo').
+skill('Bárbaro', 'Intimidacao').
+skill('Bárbaro', 'Atletismo').
+skill('Bárbaro', 'Natureza').
+skill('Bárbaro', 'Percepcao').
+skill('Bárbaro', 'Sobrevivencia').  
