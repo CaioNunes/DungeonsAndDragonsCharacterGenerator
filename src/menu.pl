@@ -1,7 +1,9 @@
 :- style_check(-singleton).
 
-:- consult(race).
+:- consult(database/race).
+:- consult(database/class).
 :- consult(about_race).
+:- consult(about_class).
 
 menu :- nl,
 	write("==== Welcome to D&D Character Generator ===="),
@@ -9,6 +11,9 @@ menu :- nl,
 
 main :- menu.
 
-	% write(" 1 - Start "), nl,
-	% write(" 2 - Quit "), nl,
-	% read(Choice),
+show_answer :- nl,
+	write("Então está decidido ! Você será um ..."),
+	answer_race(Race),
+	answer_class(Class),
+	write(Race), write(Class), write(!).
+

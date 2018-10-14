@@ -1,4 +1,6 @@
-:- consult(race).
+:- consult(database/race).
+:- consult(database/class).
+:- consult(about_class).
 :- style_check(-singleton).
 
 question_about_size :- nl,
@@ -9,7 +11,9 @@ question_about_size :- nl,
     length(L, N), N == 1,
     race(Race, Size, _, _),
     write('Você deveria ser um ... '),
-    write(Race), write(!);
+    write(Race), write(!),
+    asserta(answer_race(Race));
+    
     question_about_rarity(Size).
     
 question_about_rarity(Size) :- nl,
@@ -21,7 +25,9 @@ question_about_rarity(Size) :- nl,
     length(L, N), N == 1,
     race(Race, SizeQuery, Rarity, _),
     write('Você deveria ser um ... '),
-    write(Race), write(!);
+    write(Race), write(!),
+    asserta(answer_race(Race));
+
     question_about_alignment(SizeQuery, Rarity).
 
 question_about_alignment(Size, Rarity) :- nl,
@@ -34,5 +40,10 @@ question_about_alignment(Size, Rarity) :- nl,
     length(L, N), N == 1,
     race(Race, SizeQuery, RarityQuery, Alignment),
     write('Você deve ser um ... '),
-    write(Race), write(!);
-    write('Baseado nas suas preferências, você poderia ser um Humano ou Halfling, eles são bem versáteis !').
+    write(Race), write(!),
+    asserta(answer_race(Race)),
+    question_about_fighting_style;
+
+    write('Baseado nas suas preferências, você poderia ser um Humano, eles são bem versáteis !'),
+    asserta(answer_race('Humano')),
+    question_about_fighting_style.
