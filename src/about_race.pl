@@ -1,6 +1,6 @@
 :- consult(database/race).
-:- consult(database/class).
 :- consult(about_class).
+
 :- style_check(-singleton).
 
 question_about_size :- nl,
@@ -9,11 +9,10 @@ question_about_size :- nl,
     asserta(size(Size)),
     findall(Race, race(Race, Size, _, _), L),
     length(L, N), N == 1,
-    race(Race, Size, _, _),
+    race(Race, Size, _, _), nl,
     write('Você deveria ser um ... '),
-    write(Race), write(!),
+    write(Race), write(!), nl,
     asserta(answer_race(Race));
-    
     question_about_rarity(Size).
     
 question_about_rarity(Size) :- nl,
@@ -23,11 +22,10 @@ question_about_rarity(Size) :- nl,
     size(SizeQuery),
     findall(Race, race(Race, SizeQuery, Rarity, _), L),
     length(L, N), N == 1,
-    race(Race, SizeQuery, Rarity, _),
+    race(Race, SizeQuery, Rarity, _), nl,
     write('Você deveria ser um ... '),
-    write(Race), write(!),
+    write(Race), write(!), nl, 
     asserta(answer_race(Race));
-
     question_about_alignment(SizeQuery, Rarity).
 
 question_about_alignment(Size, Rarity) :- nl,
@@ -38,12 +36,13 @@ question_about_alignment(Size, Rarity) :- nl,
     rarity(RarityQuery),
     findall(Race, race(Race, SizeQuery, RarityQuery, Alignment), L),
     length(L, N), N == 1,
-    race(Race, SizeQuery, RarityQuery, Alignment),
+    race(Race, SizeQuery, RarityQuery, Alignment), nl,
     write('Você deve ser um ... '),
-    write(Race), write(!),
+    write(Race), write(!), nl, 
     asserta(answer_race(Race)),
     question_about_fighting_style;
-
+    nl, 
     write('Baseado nas suas preferências, você poderia ser um Humano, eles são bem versáteis !'),
+    nl,
     asserta(answer_race('Humano')),
     question_about_fighting_style.

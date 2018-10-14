@@ -7,7 +7,8 @@
 
 menu :- nl,
 	write("==== Welcome to D&D Character Generator ===="),
-	question_about_size.
+	question_about_size,
+	show_answer.
 
 main :- menu.
 
@@ -15,5 +16,5 @@ show_answer :- nl,
 	write("Então está decidido ! Você será um ..."),
 	answer_race(Race),
 	answer_class(Class),
-	write(Race), write(Class), write(!).
+	write(Race), write(" "), write(Class), write(!).
 

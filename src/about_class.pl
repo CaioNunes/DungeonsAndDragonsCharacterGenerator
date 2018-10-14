@@ -1,5 +1,5 @@
 :- consult(database/class).
-:- consult(menu).
+% :- consult(menu).
 
 :- style_check(-singleton).
 
@@ -9,11 +9,10 @@ question_about_fighting_style :- nl,
     asserta(combat(Combat)),
     findall(Class, class(Class, Combat, _, _, _, _), L),
     length(L, N), N == 1,
-    class(Class, Combat, _, _, _, _),
+    class(Class, Combat, _, _, _, _), nl,
     write('Você deveria ser um ... '),
-    write(Class), write(!),
+    write(Class), write(!), nl, 
     asserta(answer_class(Class));
-
     question_about_magic.
     
 question_about_magic :- nl,
@@ -23,9 +22,9 @@ question_about_magic :- nl,
     combat(Combat),
     findall(Class, class(Class, Combat, Magic, _, _, _), L),
     length(L, N), N == 1,
-    class(Class, Combat, Magic, _, _, _),
+    class(Class, Combat, Magic, _, _, _), nl,
     write('Você deveria ser um ... '),
-    write(Class), write(!),
+    write(Class), write(!), nl, 
     asserta(answer_class(Class));
     question_about_divinity.
 
@@ -37,11 +36,10 @@ question_about_divinity :- nl,
     magic(Magic),
     findall(Class, class(Class, Combat, Magic, Divinity, _, _), L),
     length(L, N), N == 1,
-    class(Class, Combat, Magic, Divinity, _, _),
-    write('Você deve ser um ... '),
-    write(Class), write(!),
+    class(Class, Combat, Magic, Divinity, _, _), nl,
+    write('Você deveria ser um ... '),
+    write(Class), write(!), nl, 
     asserta(answer_class(Class));
-
     question_about_ability.
 
 question_about_ability :- nl,
@@ -53,15 +51,14 @@ question_about_ability :- nl,
     divinity(Divinity),
     findall(Class, class(Class, Combat, Magic, Divinity, Ability, _), L),
     length(L, N), N == 1,
-    class(Class, Combat, Magic, Divinity, Ability, _),
-    write('Você deve ser um ... '),
-    write(Class), write(!),
+    class(Class, Combat, Magic, Divinity, Ability, _), nl,
+    write('Você deveria ser um ... '),
+    write(Class), write(!), nl, 
     asserta(answer_class(Class));
-
     question_about_behavior.
 
 question_about_behavior :- nl,
-    write(" Você gostaria de ser pacifico ou agressivo ? (agressivo/pacifico)"), nl,
+    write(" Você gostaria de ser pacifico ou agressivo ? (agressivo/pacifico/indiferente)"), nl,
     read(Behavior),
     asserta(behavior(Behavior)),
     combat(Combat),
@@ -70,11 +67,11 @@ question_about_behavior :- nl,
     ability(Ability),
     findall(Class, class(Class, Combat, Magic, Divinity, Ability, Behavior), L),
     length(L, N), N == 1,
-    class(Class, Combat, Magic, Divinity, Ability, Behavior),
-    write('Você deve ser um ... '),
-    write(Class), write(!),
+    class(Class, Combat, Magic, Divinity, Ability, Behavior), nl,
+    write('Você deveria ser um ... '),
+    write(Class), write(!), nl, 
     asserta(answer_class(Class));
-
+    nl,
     write(" Sua mente é confusa para os padrões impostos... Um Druida seria o ideal para ti, por ser o mais versátil"),
-    asserta(answer_class('Druida')),
-    show_answer.
+    nl,
+    asserta(answer_class('Druida')).
