@@ -7,6 +7,9 @@
 :- dynamic answer_class/1.
 :- dynamic skill/2.
 
+:- dynamic skill1_answer/1.
+:- dynamic skill2_answer/1.
+
 % Name, combat type(ranged, meele or indifferent), can use magic, guided by a supernatural entity
 % knowledge or strength or agility, agressive or peaceful
 
@@ -29,4 +32,6 @@ skill('Bárbaro', 'Intimidacao').
 skill('Bárbaro', 'Atletismo').
 skill('Bárbaro', 'Natureza').
 skill('Bárbaro', 'Percepcao').
-skill('Bárbaro', 'Sobrevivencia').  
+skill('Bárbaro', 'Sobrevivencia').
+
+have_skill(Class, Skill) :- skill(Class, Skill). 

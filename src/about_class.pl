@@ -69,7 +69,7 @@ question_about_behavior :- nl,
     class(Class, Combat, Magic, Divinity, Ability, Behavior), nl,
     write('Você deveria ser um ... '),
     write(Class), write(!), nl, 
-    asserta(answer_class(Class));
+    asserta(answer_class(Class)), !;
     nl,
     write(" Sua mente é confusa para os padrões impostos... Um Druida seria o ideal para ti, por ser o mais versátil"),
     nl,
