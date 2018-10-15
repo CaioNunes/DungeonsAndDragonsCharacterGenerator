@@ -26,12 +26,11 @@ class('Feiticeiro', longa, sim, nao, conhecimento, indiferente).
 class('Bruxo', longa, sim, sim, conhecimento, agressivo).
 class('Mago', longa, sim, nao, conhecimento, pacifico).
 
-skill('Bárbaro', 'Adestrar Animais').
-skill('Bárbaro', 'Atletismo').
-skill('Bárbaro', 'Intimidacao').
-skill('Bárbaro', 'Atletismo').
-skill('Bárbaro', 'Natureza').
-skill('Bárbaro', 'Percepcao').
-skill('Bárbaro', 'Sobrevivencia').
+skill('Bárbaro', adestrar_animais).
+skill('Bárbaro', atletismo).
+skill('Bárbaro', intimidacao).
+skill('Bárbaro', natureza).
+skill('Bárbaro', percepcao).
+skill('Bárbaro', sobrevivencia).
 
 have_skill(Class, Skill) :- skill(Class, Skill). 
