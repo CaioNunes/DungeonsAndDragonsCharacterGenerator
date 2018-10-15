@@ -11,7 +11,8 @@ menu :- nl,
 	question_about_size,
 	show_class_and_race,
 	show_skills,
-	show_class_race_and_skills.
+	show_class_race_and_skills,
+	show_hit_dices.
 
 main :- menu.
 
@@ -31,3 +32,12 @@ show_class_race_and_skills :- nl,
 	write(" proficiente em ... "),
 	write(Skill1), write(" e "), write(Skill2),
 	write(" ! Curioso, muito curioso...").
+
+show_hit_dices :- nl,
+	answer_race(Race),
+	answer_class(Class),
+	write( " Por ser um "), write(Class),
+	write(", você possui "),
+	hit_points_per_class(Class, HitPoints),
+	write(" pontos de vida "),
+	write(HitPoints), write(" estamos progredindo, vamos continuar !").

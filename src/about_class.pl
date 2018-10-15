@@ -1,4 +1,5 @@
 :- consult(database/class).
+:- consult(about_skills).
 
 :- style_check(-singleton).
 
