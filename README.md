@@ -10,5 +10,6 @@ Não foi possível, devido ao tempo, concluir todas as features esperadas. Coisa
 - Atributos principais.
 - Equipamentos adequados.
 - Dinheiro inicial.
+- Maior quantidade de perguntas para definição de raça e classe.
 
 Posteriormente, entretanto, são features que serão adicionadas, visto que a motivação da utilização do projeto é extremamente relevante, pois simplifica o processo de criação de personagem, que muitas vezes pode ser extremamente cansativo e necessita de muitas consultas no próprio livro do jogador ( D&D 5.Ed Player's Handbook).
