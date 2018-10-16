@@ -2,17 +2,19 @@
 
 :- consult(database/race).
 :- consult(database/class).
+:- consult(database/background).
 :- consult(about_race).
 :- consult(about_class).
 :- consult(about_skills).
 
 menu :- nl,
-	write(" ==== Welcome to D&D Character Generator ==== "),
+	write(" Bem vindo ao gerador de personagens de Dungeons and Dragons ! Vamos começar ?"), nl, 
 	question_about_size,
 	show_class_and_race,
 	show_skills,
 	show_class_race_and_skills,
-	show_hit_dices.
+	show_hit_dices,
+	show_background.
 
 main :- menu.
 
@@ -41,3 +43,11 @@ show_hit_dices :- nl,
 	hit_points_per_class(Class, HitPoints),
 	write(" pontos de vida "),
 	write(HitPoints), write(" estamos progredindo, vamos continuar !").
+
+show_background :- nl,
+	background_choosed(Background),
+	write( " Você possui o seguinte background: "),
+	write(Background), write(" ! "), nl,
+	have_background_history(Background,History),
+	write(History), nl, 
+	write(" Este era você no passado. Seu personagem está pronto para aventuras !").

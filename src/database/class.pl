@@ -134,18 +134,18 @@ skill('Ranger', natureza).
 skill('Ranger', percepcao).
 skill('Ranger', sobrevivencia).
 
-hit_points_per_class('Bárbaro', '12 + seu modificador de constituicao').
-hit_points_per_class('Bardo', '8 + seu modificador de constituicao').
-hit_points_per_class('Bruxo', '8 + seu modificador de constituicao').
-hit_points_per_class('Clérigo', '8 + seu modificador de constituicao').
-hit_points_per_class('Druida', '8 + seu modificador de constituicao').
-hit_points_per_class('Feiticeiro', '6 + seu modificador de constituicao').
-hit_points_per_class('Ladino', '8 + seu modificador de constituicao').
-hit_points_per_class('Lutador', '10 + seu modificador de constituicao').
-hit_points_per_class('Mago', '6 + seu modificador de constituicao').
-hit_points_per_class('Monge', '8 + seu modificador de constituicao').
-hit_points_per_class('Paladino', '10 + seu modificador de constituicao').
-hit_points_per_class('Ranger', '10 + seu modificador de constituicao').
+hit_points_per_class('Bárbaro', '12').
+hit_points_per_class('Bardo', '8').
+hit_points_per_class('Bruxo', '8').
+hit_points_per_class('Clérigo', '8').
+hit_points_per_class('Druida', '8').
+hit_points_per_class('Feiticeiro', '6').
+hit_points_per_class('Ladino', '8').
+hit_points_per_class('Lutador', '10').
+hit_points_per_class('Mago', '6').
+hit_points_per_class('Monge', '8').
+hit_points_per_class('Paladino', '10').
+hit_points_per_class('Ranger', '10').
 
 % rules
 

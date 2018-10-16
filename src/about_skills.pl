@@ -1,4 +1,5 @@
 :- consult(database/class).
+:- consult(about_background).
 
 :- dynamic show_skills/0.
 :- dynamic select_skills/0.
@@ -19,7 +20,8 @@ select_skills :- nl,
     have_skill(Class, FirstSkill),
     have_skill(Class, SecondSkill),
     asserta(skill1_answer(FirstSkill)),
-    asserta(skill2_answer(SecondSkill));
+    asserta(skill2_answer(SecondSkill)),
+    question_about_background;
     write(" Escolha opções válidas, por favor !"),
     nl,
     show_skills.

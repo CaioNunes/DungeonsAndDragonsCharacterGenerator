@@ -10,8 +10,8 @@
 
 race('Anão', baixo, comum, leal).
 race('Elfo', alto, comum, caotico).
-race('Gnomo', baixo, incomum, neutro).
-race('Tiefling', alto, incomum, caotico).
 race('Halfling', baixo, comum, neutro).
 race('Humano', alto, comum, neutro).
+race('Gnomo', baixo, incomum, neutro).
+race('Tiefling', alto, incomum, caotico).
 race('Draconato', alto, incomum, neutro).
